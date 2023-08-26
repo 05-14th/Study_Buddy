@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item android:id="@+id/home_button"
+            android:icon="@drawable/baseline_home_24"
+            android:title="Home"/>
+        <item android:id="@+id/discussion"
+            android:icon="@drawable/baseline_chat_24"
+            android:title="Discussion"/>
+        <item android:id="@+id/flashcards"
+            android:icon="@drawable/baseline_note_24"
+            android:title="Flashcards"/>
+        <item android:id="@+id/account"
+            android:icon="@drawable/baseline_account_circle_24"
+            android:title="Account"/>
+        <item android:id="@+id/settings"
+            android:icon="@drawable/baseline_settings_24"
+            android:title="Settings"/>
+        <item android:id="@+id/logout"
+            android:icon="@drawable/baseline_logout_24"
+            android:title="Logout"/>
+
+    </group>
+</menu>
