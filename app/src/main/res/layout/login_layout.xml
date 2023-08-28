@@ -8,7 +8,7 @@
     android:background="#ffffff"
     android:backgroundTint="#FFFFFF"
     android:padding="24dp"
-    tools:context=".login_and_registration_forms.UserAccountForm"
+    tools:context=".login_and_registration_forms.MainActivity"
     tools:layout_editor_absoluteX="24dp"
     tools:layout_editor_absoluteY="24dp">
 
