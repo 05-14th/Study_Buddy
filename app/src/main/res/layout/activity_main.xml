@@ -11,7 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:visibility="visible">
+        android:visibility="gone">
 
         <SearchView
             android:layout_width="match_parent"
@@ -100,7 +100,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:visibility="invisible">
+        android:visibility="gone">
 
         <com.google.android.material.appbar.AppBarLayout
             android:layout_width="match_parent"
@@ -211,22 +211,35 @@
 
     </LinearLayout>
 
-    <androidx.drawerlayout.widget.DrawerLayout
-        android:id="@+id/nav_drawer"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-        <com.google.android.material.navigation.NavigationView
-            android:id="@+id/nav_view"
+        <com.google.android.material.appbar.AppBarLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:visibility="visible"
-            android:layout_gravity="start"
-            app:headerLayout="@layout/header"
-            app:menu="@menu/navigationbar">
+            android:layout_height="82dp">
 
-        </com.google.android.material.navigation.NavigationView>
-    </androidx.drawerlayout.widget.DrawerLayout>
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="?attr/colorPrimary"
+                android:minHeight="?attr/actionBarSize"
+                android:theme="?attr/actionBarTheme" />
+        </com.google.android.material.appbar.AppBarLayout>
+    </LinearLayout>
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:visibility="visible"
+        app:headerLayout="@layout/header"
+        app:menu="@menu/navigationbar">
+
+    </com.google.android.material.navigation.NavigationView>
 
 
 </androidx.drawerlayout.widget.DrawerLayout>

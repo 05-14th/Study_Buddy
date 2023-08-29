@@ -83,7 +83,7 @@ public class MainActivity extends AppCompatActivity {
                 }
                 else if(id == R.id.logout)
                 {
-                    Toast.makeText(MainActivity.this, "Logout Selected", Toast.LENGTH_LONG).show();
+                    setContentView(R.layout.signup_layout);
                 }
                 return false;
             }
@@ -98,7 +98,7 @@ public class MainActivity extends AppCompatActivity {
                 drawerLayout1.getChildAt(i).setVisibility(View.INVISIBLE);
             }
             linearLayout.setVisibility(View.VISIBLE);
-            DrawerLayout navDrawer = findViewById(R.id.nav_drawer);
+            DrawerLayout navDrawer = findViewById(R.id.drawer_layout);
             navDrawer.closeDrawer(GravityCompat.START);
 
 
