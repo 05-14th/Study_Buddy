@@ -5,6 +5,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
@@ -32,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
 
     void registerView(){
         setContentView(R.layout.signup_layout);
-        Button BackButton = findViewById(R.id.backbutton);
+        ImageButton BackButton = findViewById(R.id.backbutton);
         BackButton.setOnClickListener(view -> loginView());
     }
 
@@ -48,6 +49,8 @@ public class MainActivity extends AppCompatActivity {
                 passwordText = findViewById(R.id.passwordLogin);
                 if(usernameText.getText().toString().equals("Administrator") && passwordText.getText().toString().equals("studybuddy12345")){
                     mainActivity();
+                } else {
+                    Toast.makeText(MainActivity.this, "Please enter valid credentials", Toast.LENGTH_SHORT).show();
                 }
             }
         });
@@ -83,7 +86,7 @@ public class MainActivity extends AppCompatActivity {
                 }
                 else if(id == R.id.logout)
                 {
-                    setContentView(R.layout.signup_layout);
+                    loginView();
                 }
                 return false;
             }
